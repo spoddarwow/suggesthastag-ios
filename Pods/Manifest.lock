@@ -1,0 +1,13 @@
+PODS:
+  - QorumLogs (0.2)
+  - SwiftyJSON (2.3.1)
+
+DEPENDENCIES:
+  - QorumLogs
+  - SwiftyJSON (~> 2.3)
+
+SPEC CHECKSUMS:
+  QorumLogs: db805fafceab06c4628b1173e629f832ccfbb9a4
+  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,6 @@
+framework module Pods_Suggest__Tag {
+  umbrella header "Pods-Suggest #Tag-umbrella.h"
+
+  export *
+  module * { export * }
+}

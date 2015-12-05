@@ -1,0 +1,19 @@
+{
+    "metadata" : {
+        "processedImageURL" : {
+            "thumbnail" : "https://localhost:8443/amazons3/9180712/processed/thumbnail/image_30102015.png",
+            "actual" : "https://localhost:8443/amazons3/9180712/processed/actual/image_30102015.png",
+            "large" : "https://localhost:8443/amazons3/9180712/processed/large/image_30102015.png"
+        },
+        "appId" : "9180712",
+        "requestedDateTime" : "30/10/2015 10:36:19"
+    },
+    "response" :{
+        "code" : "200",
+        "responseDateTime" : "30/10/2015 10:36:21",
+        "error" : {
+            "code" : "ERR_302",
+            "message" : "Error in connecting to the service."
+        }
+    }
+}
