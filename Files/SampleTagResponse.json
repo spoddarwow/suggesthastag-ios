@@ -160,6 +160,11 @@
                             "mediaCount": "232189678"
                         },
                         {
+                            "tagName": "#suggesthashtag",
+                            "tagNameWithoutHash": "suggesthashtag",
+                            "mediaCount": "0"
+                        },
+                        {
                             "tagName": "#summer",
                             "tagNameWithoutHash": "summer",
                             "mediaCount": "232189678"

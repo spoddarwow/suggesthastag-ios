@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Camera Roll-->
@@ -293,22 +292,6 @@
                                     <color key="titleShadowColor" red="0.84505561839999999" green="0.84505561839999999" blue="0.84505561839999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fo-qK-3d3">
-                                <rect key="frame" x="0.0" y="64" width="600" height="49"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <tabBarItem title="Popular Suggestions" id="Wbm-kP-gfF">
-                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                                    </tabBarItem>
-                                    <tabBarItem tag="1" title="Favourites" id="hfO-N8-5TV">
-                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                                    </tabBarItem>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="3An-qP-FIX" id="qvd-Kd-ZGh"/>
-                                </connections>
-                            </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-zX-Fl3">
                                 <rect key="frame" x="20" y="113" width="560" height="427"/>
                                 <animations/>
@@ -400,6 +383,27 @@
                                     <outlet property="delegate" destination="3An-qP-FIX" id="KWs-xC-vYD"/>
                                 </connections>
                             </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fo-qK-3d3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="49"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <items>
+                                    <tabBarItem title="Popular" id="Wbm-kP-gfF">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="1" title="Favourites" id="hfO-N8-5TV">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="2" title="Add" id="5h2-zv-Vu8">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                                    </tabBarItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="3An-qP-FIX" id="qvd-Kd-ZGh"/>
+                                    <outletCollection property="gestureRecognizers" destination="QsD-Cm-RhS" appends="YES" id="XjD-03-vJ9"/>
+                                </connections>
+                            </tabBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,16 +421,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="#Tags" id="XVm-6v-sQL">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="eOi-Yk-0MM"/>
-                            <barButtonItem systemItem="search" id="orU-hO-bk6">
-                                <connections>
-                                    <segue destination="SMk-ws-un4" kind="popoverPresentation" identifier="tagSearchSegue" popoverAnchorBarButtonItem="orU-hO-bk6" id="OzP-pR-YHb">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="orU-hO-bk6">
+                            <connections>
+                                <segue destination="SMk-ws-un4" kind="popoverPresentation" identifier="tagSearchSegue" popoverAnchorBarButtonItem="orU-hO-bk6" id="OzP-pR-YHb">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="Hw5-bM-7Bh" id="M4D-l5-fQM"/>
@@ -451,100 +452,9 @@
                         <outlet property="searchResultsDelegate" destination="3An-qP-FIX" id="hzs-hj-aOV"/>
                     </connections>
                 </searchDisplayController>
+                <swipeGestureRecognizer direction="right" id="QsD-Cm-RhS"/>
             </objects>
             <point key="canvasLocation" x="2368" y="2183"/>
-        </scene>
-        <!--Tag Search Table View Controller-->
-        <scene sceneID="OXr-vQ-nvF">
-            <objects>
-                <viewController storyboardIdentifier="searchTagController" id="8ZZ-Lf-mLA" customClass="TagSearchTableViewController" customModule="Suggest__Tag" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lcj-1y-jzn"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mv3-ip-Vog"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Q1C-al-aJB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c19-jM-FOS">
-                                <rect key="frame" x="20" y="72" width="560" height="528"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="tagDetailsSearch" rowHeight="77" id="tpJ-L7-apB" customClass="TagSearchTableViewCell" customModule="Suggest__Tag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="77"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tpJ-L7-apB" id="oaC-bB-85R">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="76.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zmk-rb-vZa">
-                                                    <rect key="frame" x="496" y="23" width="51" height="31"/>
-                                                    <animations/>
-                                                </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPR-p5-FGN">
-                                                    <rect key="frame" x="18" y="8" width="458" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-n6-EgB">
-                                                    <rect key="frame" x="55" y="37" width="421" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="8ZZ-Lf-mLA" id="Cgv-5Y-eek"/>
-                                    <outlet property="delegate" destination="8ZZ-Lf-mLA" id="Pej-nW-0Te"/>
-                                </connections>
-                            </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l5l-bs-mv8">
-                                <rect key="frame" x="20" y="28" width="560" height="44"/>
-                                <animations/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="light" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="8ZZ-Lf-mLA" id="Hmj-Ep-lxe"/>
-                                </connections>
-                            </searchBar>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="c19-jM-FOS" firstAttribute="top" secondItem="l5l-bs-mv8" secondAttribute="bottom" constant="9" id="0Ua-AT-h6d"/>
-                            <constraint firstItem="c19-jM-FOS" firstAttribute="bottom" secondItem="Mv3-ip-Vog" secondAttribute="top" id="39a-fC-mSV"/>
-                            <constraint firstItem="c19-jM-FOS" firstAttribute="centerX" secondItem="l5l-bs-mv8" secondAttribute="centerX" id="4Gk-pS-8zo"/>
-                            <constraint firstItem="l5l-bs-mv8" firstAttribute="top" secondItem="Lcj-1y-jzn" secondAttribute="bottom" constant="8" id="BvF-ef-Nxd"/>
-                            <constraint firstItem="l5l-bs-mv8" firstAttribute="leading" secondItem="Q1C-al-aJB" secondAttribute="leading" constant="20" id="CzR-Gy-qiQ"/>
-                            <constraint firstItem="c19-jM-FOS" firstAttribute="leading" secondItem="Q1C-al-aJB" secondAttribute="leadingMargin" id="MMC-ba-z31"/>
-                            <constraint firstAttribute="trailing" secondItem="l5l-bs-mv8" secondAttribute="trailing" constant="20" id="lhV-rP-8WP"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="owJ-bV-xlS" id="HhM-H4-ZgP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ywF-NJ-2hZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="owJ-bV-xlS">
-                    <connections>
-                        <outlet property="delegate" destination="8ZZ-Lf-mLA" id="uHk-KF-fzM"/>
-                        <outlet property="searchBar" destination="l5l-bs-mv8" id="YCM-FU-hOM"/>
-                        <outlet property="searchContentsController" destination="8ZZ-Lf-mLA" id="Uq7-iO-QTa"/>
-                        <outlet property="searchResultsDataSource" destination="8ZZ-Lf-mLA" id="N2X-ua-EIr"/>
-                        <outlet property="searchResultsDelegate" destination="8ZZ-Lf-mLA" id="E36-p7-95H"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="3021" y="2183"/>
         </scene>
         <!--Tag Search Table View Controller-->
         <scene sceneID="B5J-Jo-wV6">
@@ -565,11 +475,11 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tagDetailsSearch" selectionStyle="default" indentationWidth="10" reuseIdentifier="TagSearchTableViewCell" rowHeight="70" id="uiU-w6-a98" customClass="TagSearchTableViewCell" customModule="Suggest__Tag" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tagSearchCell" rowHeight="70" id="uiU-w6-a98" customClass="TagSearchTableViewCell" customModule="Suggest__Tag" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="tagSearch" tableViewCell="uiU-w6-a98" id="uWn-lk-hIy">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uiU-w6-a98" id="uWn-lk-hIy">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYx-Kn-yew">
@@ -619,7 +529,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3468" y="2989"/>
+            <point key="canvasLocation" x="3700" y="2373"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -803,7 +713,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzL-Ew-YVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2656" y="2989"/>
+            <point key="canvasLocation" x="3082" y="2373"/>
         </scene>
     </scenes>
     <resources>
