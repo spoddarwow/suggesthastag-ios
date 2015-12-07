@@ -38,11 +38,8 @@ class MyPhotoFinalStepViewController: UIViewController {
             let responseJSON =  DummyResponseTagStruct(name: "SampleTagResponse").getDummyJsonResponse();
             var tagObject = DecorateHashTagResponse(jsonResponse: responseJSON);
             let navController = segue.destinationViewController as! UINavigationController
-            let displaySelectedImageController = navController.viewControllers[0] as! SuggestedHashTagViewController
-            //let displaySelectedImageController =  segue.destinationViewController as! MyPhotoFInalStepViewController
-            
-            
-            // presentViewController(displaySelectedImageController, animated: true, completion: nil)
+            let displaySuggestedTagResponse = navController.viewControllers[0] as! SuggestedHashTagViewController
+            displaySuggestedTagResponse.tagResponseToShow = tagObject;
         }
     }
     

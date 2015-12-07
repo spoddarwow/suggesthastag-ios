@@ -41,7 +41,7 @@ class MyAlbumMenuTableViewController: UITableViewController {
         return albums.count
     }
 
-override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("albumNamePopup", forIndexPath: indexPath) as! AlbumMenuTableViewCell
         switch (indexPath.section) {
             case 0:
@@ -66,19 +66,7 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:
         return cell
     }
     
-    func getAssetThumbnail(asset: PHAsset) -> UIImage {
-        let manager = PHImageManager.defaultManager()
-        let option = PHImageRequestOptions()
-        var thumbnail = UIImage()
-        option.synchronous = true
-        manager.requestImageForAsset(asset, targetSize: CGSize(width: 311.0, height: 45.0), contentMode: .AspectFit, options: option, resultHandler: {(result, info)->Void in
-            thumbnail = result!
-        })
-        return thumbnail
-    }
-
-
-   
+    
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let albumHeaderCell = tableView.dequeueReusableCellWithIdentifier("albumNamePopupHeader") as! MyAlbumPopUpHeaderTableViewCell
         albumHeaderCell.backgroundColor = UIColor.lightGrayColor()
@@ -94,10 +82,8 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-       // dismissViewControllerAnimated(true, completion: nil)
-        print("1");
         if segue.identifier == "photosToShowFromThisAlbum" {
-             print("2");
+            
             let tabController = segue.destinationViewController as! UITabBarController
             for viewController in tabController.viewControllers! {
                 print(viewController)
@@ -111,14 +97,20 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:
             if let selectedAlbumCell = sender as? AlbumMenuTableViewCell {
                 photoViewController.albumToShow = selectedAlbumCell.albumName.text!
             }
-            //photoViewController.view.reloadInputViews()
-            //self.navigationController!.presentViewController(photoViewController, animated: true, completion: nil)
-            //photoViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
-            //photoViewController.popoverPresentationController!.delegate = self
+            
         }
     }
 
-   
+    func getAssetThumbnail(asset: PHAsset) -> UIImage {
+        let manager = PHImageManager.defaultManager()
+        let option = PHImageRequestOptions()
+        var thumbnail = UIImage()
+        option.synchronous = true
+        manager.requestImageForAsset(asset, targetSize: CGSize(width: 311.0, height: 45.0), contentMode: .AspectFit, options: option, resultHandler: {(result, info)->Void in
+            thumbnail = result!
+        })
+        return thumbnail
+    }
 
     /*
     // Override to support editing the table view.

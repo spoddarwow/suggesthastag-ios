@@ -25,7 +25,8 @@ class DecorateHashTagResponseTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let obj =  DummyResponseTagStruct(name: "SampleTagResponse");
         var jsonObj = DecorateHashTagResponse(jsonResponse: obj.getDummyJsonResponse());
-        print("Object \(jsonObj)");
+        
+        print("Object \(jsonObj.response.responseTagAlphabet.tagAplhabets[0])");
     }
 
     func testPerformanceExample() {

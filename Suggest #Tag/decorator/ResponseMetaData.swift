@@ -13,6 +13,8 @@ struct ResponseMetaData {
     var appId: String;
     var requestedDateTime: NSDate;
     var processedImageURL: ProcessedImageURL
+    var responseCode: String;
+    var responseDateTime: NSDate;
     
     init(jsonResponse: JSON) {
         self.appId = jsonResponse["appId"].string!;
@@ -20,6 +22,9 @@ struct ResponseMetaData {
         formatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
         self.requestedDateTime = formatter.dateFromString(jsonResponse["requestedDateTime"].string!)!;
         self.processedImageURL = ProcessedImageURL(jsonResponse: jsonResponse["processedImageURL"]);
+        self.responseCode = jsonResponse["code"].string!;
+        self.responseDateTime = formatter.dateFromString(jsonResponse["responseDateTime"].string!)!;
+
     }
 }
 

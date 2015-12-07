@@ -12,11 +12,13 @@ import SwiftyJSON
 class DecorateHashTagResponse {
     var jsonResponse: JSON
     var responseMetaData: ResponseMetaData
+    var responseError: ResponseError;
     var response: SuggestedTagResponse
     
     init(jsonResponse: JSON) {
         self.jsonResponse = jsonResponse;
         self.responseMetaData = ResponseMetaData(jsonResponse: self.jsonResponse["metadata"]);
+        self.responseError = ResponseError(jsonResponse: jsonResponse["responseerror"]);
         self.response = SuggestedTagResponse(jsonResponse: self.jsonResponse["response"]);
     }
 }

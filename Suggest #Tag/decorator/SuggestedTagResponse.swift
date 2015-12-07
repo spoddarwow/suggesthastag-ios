@@ -10,18 +10,15 @@ import Foundation
 import SwiftyJSON
 
 struct SuggestedTagResponse {
-    var responseCode: String;
-    var responseDateTime: NSDate;
-    var responseError: ResponseError;
-    var responseData: TagResponses;
+    
+    var responseTagCount: String!;
+    var responseTagAlphabet: ResponseTagAlphabet!;
+    var responseData: TagResponseDictionary;
     
     init(jsonResponse: JSON) {
-        self.responseCode = jsonResponse["code"].string!;
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
-        self.responseDateTime = formatter.dateFromString(jsonResponse["responseDateTime"].string!)!;
-        self.responseError = ResponseError(jsonResponse: jsonResponse["error"]);
-        self.responseData = TagResponses(jsonResponse: jsonResponse["responseTags"])
+        self.responseTagCount = jsonResponse["count"].string!;
+        self.responseTagAlphabet = ResponseTagAlphabet(jsonResponse: jsonResponse["tagAlpahbets"])
+        self.responseData = TagResponseDictionary(jsonResponse: jsonResponse["responseTags"])
     }
 }
 

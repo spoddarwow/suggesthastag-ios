@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-       
-       print("Hello Suggest #Tag");
+        
         let navigationBarAppearace = UINavigationBar.appearance()
         //navigationBarAppearace.tintColor = UIColor.whiteColor()
         navigationBarAppearace.barTintColor = UIColor(red:244/256.0, green:249/256.0, blue:249/256.0, alpha:1.0)

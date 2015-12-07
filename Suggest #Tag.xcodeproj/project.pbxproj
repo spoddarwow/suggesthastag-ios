@@ -13,6 +13,15 @@
 		572C9D5E1BE5943000E6DACE /* DummyResponseTagStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C9D5D1BE5943000E6DACE /* DummyResponseTagStruct.swift */; };
 		572C9D5F1BE5943000E6DACE /* DummyResponseTagStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C9D5D1BE5943000E6DACE /* DummyResponseTagStruct.swift */; };
 		572C9D611BE5947900E6DACE /* ResponseTagStructTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C9D601BE5947900E6DACE /* ResponseTagStructTests.swift */; };
+		572D5E0F1C1476CC001EF7FD /* TagSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D5E0E1C1476CC001EF7FD /* TagSearchTableViewCell.swift */; };
+		572D5E101C1476CC001EF7FD /* TagSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D5E0E1C1476CC001EF7FD /* TagSearchTableViewCell.swift */; };
+		57303C4B1C1313A900AC3522 /* DisplayTagResponseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303C4A1C1313A900AC3522 /* DisplayTagResponseTableViewController.swift */; };
+		57303C4D1C132F3C00AC3522 /* TagAlphabetHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303C4C1C132F3C00AC3522 /* TagAlphabetHeaderTableViewCell.swift */; };
+		57303C4F1C132F5100AC3522 /* TagDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303C4E1C132F5100AC3522 /* TagDetailsTableViewCell.swift */; };
+		57303C511C1337A100AC3522 /* ResponseTagAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303C501C1337A100AC3522 /* ResponseTagAlphabet.swift */; };
+		57303C521C1337A100AC3522 /* ResponseTagAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303C501C1337A100AC3522 /* ResponseTagAlphabet.swift */; };
+		57303C541C133AC800AC3522 /* TagResponseDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303C531C133AC800AC3522 /* TagResponseDictionary.swift */; };
+		57303C551C133AC800AC3522 /* TagResponseDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303C531C133AC800AC3522 /* TagResponseDictionary.swift */; };
 		573108B21C12980700A18E63 /* SuggestedHashTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573108B11C12980700A18E63 /* SuggestedHashTagViewController.swift */; };
 		5733F9491C11B8F000C3AFDB /* DecorateHashTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733F9481C11B8F000C3AFDB /* DecorateHashTagResponse.swift */; };
 		5733F94A1C11B8F000C3AFDB /* DecorateHashTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733F9481C11B8F000C3AFDB /* DecorateHashTagResponse.swift */; };
@@ -29,6 +38,7 @@
 		5733F95E1C11BCA000C3AFDB /* ProcessedImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733F95C1C11BCA000C3AFDB /* ProcessedImageURL.swift */; };
 		5733F9601C11BCBD00C3AFDB /* ResponseMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733F95F1C11BCBD00C3AFDB /* ResponseMetaData.swift */; };
 		5733F9611C11BCBD00C3AFDB /* ResponseMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733F95F1C11BCBD00C3AFDB /* ResponseMetaData.swift */; };
+		5736B8951C15AA0C003FEFDC /* TagSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5736B8941C15AA0C003FEFDC /* TagSearchTableViewController.swift */; };
 		575891DB1BC9567B00235DCC /* AlbumMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575891DA1BC9567B00235DCC /* AlbumMenuTableViewCell.swift */; };
 		5772B85B1BE7760700D68BB3 /* SampleTagResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 572C9D5A1BE5868400E6DACE /* SampleTagResponse.json */; };
 		57E627CE1BC8B308007A6E06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E627CD1BC8B308007A6E06 /* AppDelegate.swift */; };
@@ -69,6 +79,12 @@
 		572C9D5A1BE5868400E6DACE /* SampleTagResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = SampleTagResponse.json; path = Files/SampleTagResponse.json; sourceTree = "<group>"; };
 		572C9D5D1BE5943000E6DACE /* DummyResponseTagStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DummyResponseTagStruct.swift; path = beans/DummyResponseTagStruct.swift; sourceTree = "<group>"; };
 		572C9D601BE5947900E6DACE /* ResponseTagStructTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseTagStructTests.swift; sourceTree = "<group>"; };
+		572D5E0E1C1476CC001EF7FD /* TagSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagSearchTableViewCell.swift; path = customCell/TagSearchTableViewCell.swift; sourceTree = "<group>"; };
+		57303C4A1C1313A900AC3522 /* DisplayTagResponseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayTagResponseTableViewController.swift; path = controllers/DisplayTagResponseTableViewController.swift; sourceTree = "<group>"; };
+		57303C4C1C132F3C00AC3522 /* TagAlphabetHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagAlphabetHeaderTableViewCell.swift; path = customCell/TagAlphabetHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		57303C4E1C132F5100AC3522 /* TagDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagDetailsTableViewCell.swift; path = customCell/TagDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		57303C501C1337A100AC3522 /* ResponseTagAlphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseTagAlphabet.swift; path = decorator/ResponseTagAlphabet.swift; sourceTree = "<group>"; };
+		57303C531C133AC800AC3522 /* TagResponseDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagResponseDictionary.swift; path = decorator/TagResponseDictionary.swift; sourceTree = "<group>"; };
 		573108B11C12980700A18E63 /* SuggestedHashTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestedHashTagViewController.swift; path = controllers/SuggestedHashTagViewController.swift; sourceTree = "<group>"; };
 		5733F9481C11B8F000C3AFDB /* DecorateHashTagResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecorateHashTagResponse.swift; path = decorator/DecorateHashTagResponse.swift; sourceTree = "<group>"; };
 		5733F94B1C11B91200C3AFDB /* DecorateHashTagResponseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecorateHashTagResponseTest.swift; sourceTree = "<group>"; };
@@ -78,6 +94,7 @@
 		5733F9591C11BC8200C3AFDB /* SuggestedTagResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestedTagResponse.swift; path = decorator/SuggestedTagResponse.swift; sourceTree = "<group>"; };
 		5733F95C1C11BCA000C3AFDB /* ProcessedImageURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProcessedImageURL.swift; path = decorator/ProcessedImageURL.swift; sourceTree = "<group>"; };
 		5733F95F1C11BCBD00C3AFDB /* ResponseMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseMetaData.swift; path = decorator/ResponseMetaData.swift; sourceTree = "<group>"; };
+		5736B8941C15AA0C003FEFDC /* TagSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagSearchTableViewController.swift; path = controllers/TagSearchTableViewController.swift; sourceTree = "<group>"; };
 		575891DA1BC9567B00235DCC /* AlbumMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumMenuTableViewCell.swift; path = customCell/AlbumMenuTableViewCell.swift; sourceTree = "<group>"; };
 		57E627CA1BC8B308007A6E06 /* Suggest #Tag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Suggest #Tag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E627CD1BC8B308007A6E06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +201,13 @@
 				5733F95C1C11BCA000C3AFDB /* ProcessedImageURL.swift */,
 				5733F95F1C11BCBD00C3AFDB /* ResponseMetaData.swift */,
 				573108B11C12980700A18E63 /* SuggestedHashTagViewController.swift */,
+				57303C4A1C1313A900AC3522 /* DisplayTagResponseTableViewController.swift */,
+				57303C4C1C132F3C00AC3522 /* TagAlphabetHeaderTableViewCell.swift */,
+				57303C4E1C132F5100AC3522 /* TagDetailsTableViewCell.swift */,
+				57303C501C1337A100AC3522 /* ResponseTagAlphabet.swift */,
+				57303C531C133AC800AC3522 /* TagResponseDictionary.swift */,
+				572D5E0E1C1476CC001EF7FD /* TagSearchTableViewCell.swift */,
+				5736B8941C15AA0C003FEFDC /* TagSearchTableViewController.swift */,
 			);
 			path = "Suggest #Tag";
 			sourceTree = "<group>";
@@ -404,11 +428,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5733F9601C11BCBD00C3AFDB /* ResponseMetaData.swift in Sources */,
+				57303C4D1C132F3C00AC3522 /* TagAlphabetHeaderTableViewCell.swift in Sources */,
+				572D5E0F1C1476CC001EF7FD /* TagSearchTableViewCell.swift in Sources */,
+				5736B8951C15AA0C003FEFDC /* TagSearchTableViewController.swift in Sources */,
 				573108B21C12980700A18E63 /* SuggestedHashTagViewController.swift in Sources */,
 				57E6282A1BC8DB58007A6E06 /* MyAlbumMenuTableViewController.swift in Sources */,
+				57303C541C133AC800AC3522 /* TagResponseDictionary.swift in Sources */,
 				5733F9491C11B8F000C3AFDB /* DecorateHashTagResponse.swift in Sources */,
 				57E627CE1BC8B308007A6E06 /* AppDelegate.swift in Sources */,
+				57303C4B1C1313A900AC3522 /* DisplayTagResponseTableViewController.swift in Sources */,
 				572C9D5E1BE5943000E6DACE /* DummyResponseTagStruct.swift in Sources */,
+				57303C4F1C132F5100AC3522 /* TagDetailsTableViewCell.swift in Sources */,
+				57303C511C1337A100AC3522 /* ResponseTagAlphabet.swift in Sources */,
 				5733F9571C11BC6200C3AFDB /* ResponseError.swift in Sources */,
 				5733F95D1C11BCA000C3AFDB /* ProcessedImageURL.swift in Sources */,
 				570497521BCAA16B00B7A115 /* MyPhotoFinalStepViewController.swift in Sources */,
@@ -429,13 +460,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5733F94C1C11B91200C3AFDB /* DecorateHashTagResponseTest.swift in Sources */,
+				57303C521C1337A100AC3522 /* ResponseTagAlphabet.swift in Sources */,
 				5733F9611C11BCBD00C3AFDB /* ResponseMetaData.swift in Sources */,
 				5733F94A1C11B8F000C3AFDB /* DecorateHashTagResponse.swift in Sources */,
 				572C9D611BE5947900E6DACE /* ResponseTagStructTests.swift in Sources */,
 				5733F9581C11BC6200C3AFDB /* ResponseError.swift in Sources */,
 				5733F9551C11BC3C00C3AFDB /* TagResponses.swift in Sources */,
 				5733F95B1C11BC8200C3AFDB /* SuggestedTagResponse.swift in Sources */,
+				57303C551C133AC800AC3522 /* TagResponseDictionary.swift in Sources */,
 				572C9D5F1BE5943000E6DACE /* DummyResponseTagStruct.swift in Sources */,
+				572D5E101C1476CC001EF7FD /* TagSearchTableViewCell.swift in Sources */,
 				5733F9521C11BC0F00C3AFDB /* TagResponse.swift in Sources */,
 				57E627E51BC8B308007A6E06 /* Suggest__TagTests.swift in Sources */,
 				5733F95E1C11BCA000C3AFDB /* ProcessedImageURL.swift in Sources */,

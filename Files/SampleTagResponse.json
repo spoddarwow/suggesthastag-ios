@@ -6,14 +6,171 @@
             "large" : "https://localhost:8443/amazons3/9180712/processed/large/image_30102015.png"
         },
         "appId" : "9180712",
-        "requestedDateTime" : "30/10/2015 10:36:19"
+        "requestedDateTime" : "30/10/2015 10:36:19",
+        "code" : "200",
+        "responseDateTime" : "30/10/2015 10:36:21"
     },
     "response" :{
-        "code" : "200",
-        "responseDateTime" : "30/10/2015 10:36:21",
-        "error" : {
-            "code" : "ERR_302",
-            "message" : "Error in connecting to the service."
-        }
+        "count": "5",
+        "tagAlpahbets": [
+            "F","I","L","M","P","S"
+        ],
+        "responseTags": [
+            {
+               "F":[
+                        {
+                            "tagName": "#fashion",
+                            "tagNameWithoutHash": "fashion",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#friends",
+                            "tagNameWithoutHash": "friends",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#food",
+                            "tagNameWithoutHash": "food",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#foodlover",
+                            "tagNameWithoutHash": "foodlover",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#follow",
+                            "tagNameWithoutHash": "follow",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#followme",
+                            "tagNameWithoutHash": "followme",
+                            "mediaCount": "2189678"
+                        }
+                    ]
+            },
+            {
+               "I":[
+                    
+                        {
+                            "tagName": "#igers",
+                            "tagNameWithoutHash": "igers",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#instadaily",
+                            "tagNameWithoutHash": "instadaily",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#instagood",
+                            "tagNameWithoutHash": "instagood",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#instaupdate",
+                            "tagNameWithoutHash": "instaupdate",
+                            "mediaCount": "2329678"
+                        },
+                        {
+                            "tagName": "#imgood",
+                            "tagNameWithoutHash": "imgood",
+                            "mediaCount": "2329678"
+                        },
+                        {
+                            "tagName": "#itsme",
+                            "tagNameWithoutHash": "itsme",
+                            "mediaCount": "2329678"
+                        }
+                    ]
+            },
+            {
+               "L":[
+                        {
+                            "tagName": "#like4like",
+                            "tagNameWithoutHash": "like4like",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                        "tagName": "#likeforlike",
+                            "tagNameWithoutHash": "likeforlike",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#love",
+                            "tagNameWithoutHash": "love",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#lookout",
+                            "tagNameWithoutHash": "lookout",
+                            "mediaCount": "2189678"
+                        }
+                     ]
+            },
+            {
+                "M":[
+                        {
+                            "tagName": "#me",
+                            "tagNameWithoutHash": "me",
+                            "mediaCount": "2189678"
+                        },
+                        {
+                            "tagName": "#myself",
+                            "tagNameWithoutHash": "myself",
+                            "mediaCount": "2189678"
+                        }
+                    ]
+            },
+            {
+                "P":[
+                        {
+                            "tagName": "#photooftheday",
+                            "tagNameWithoutHash": "picoftheday",
+                            "mediaCount": "232189678"
+                        },
+                        {
+                            "tagName": "#picoftheday",
+                            "tagNameWithoutHash": "picoftheday",
+                            "mediaCount": "232189678"
+                        },
+                        {
+                            "tagName": "#pictureoftheday",
+                            "tagNameWithoutHash": "pictureoftheday",
+                            "mediaCount": "232189678"
+                        }
+                    ]
+            },
+            {
+               "S":[
+                        {
+                            "tagName": "#selfie",
+                            "tagNameWithoutHash": "selfie",
+                            "mediaCount": "232189678"
+                        },
+                        {
+                            "tagName": "#smile",
+                            "tagNameWithoutHash": "smile",
+                            "mediaCount": "232189678"
+                        },
+                        {
+                            "tagName": "#solopic",
+                            "tagNameWithoutHash": "solopic",
+                            "mediaCount": "232189678"
+                        },
+                        {
+                            "tagName": "#summer",
+                            "tagNameWithoutHash": "summer",
+                            "mediaCount": "232189678"
+                        },
+                        {
+                            "tagName": "#sunshine",
+                            "tagNameWithoutHash": "sunshine",
+                            "mediaCount": "232189678"
+                        }
+                    ]
+            }
+        ]
     }
 }

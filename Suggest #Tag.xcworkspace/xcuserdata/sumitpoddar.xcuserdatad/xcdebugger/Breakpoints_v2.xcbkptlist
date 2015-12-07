@@ -38,11 +38,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Suggest #TagTests/DecorateHashTagResponseTest.swift"
-            timestampString = "470925166.985684"
+            timestampString = "471057948.556234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "DecorateHashTagResponseTest"
             landmarkType = "3">
          </BreakpointContent>
@@ -54,13 +54,269 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Suggest #TagTests/DecorateHashTagResponseTest.swift"
-            timestampString = "470925166.985684"
+            timestampString = "471057948.556234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
             landmarkName = "testExample()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/decorator/DecorateHashTagResponse.swift"
+            timestampString = "471057589.589786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(jsonResponse:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/decorator/SuggestedTagResponse.swift"
+            timestampString = "471187618.970692"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(jsonResponse:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Suggest__Tag.SuggestedTagResponse.init (Suggest__Tag.SuggestedTagResponse.Type)(jsonResponse : SwiftyJSON.JSON) -&gt; Suggest__Tag.SuggestedTagResponse"
+                  moduleName = "Suggest #Tag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Seagate%20Expansion%20Drive/Sumit/My%20Work/Git/SuggestTag/Suggest%20%23Tag/Suggest%20%23Tag/decorator/SuggestedTagResponse.swift"
+                  timestampString = "471052053.539785"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Suggest__TagTests.SuggestedTagResponse.init (Suggest__TagTests.SuggestedTagResponse.Type)(jsonResponse : SwiftyJSON.JSON) -&gt; Suggest__TagTests.SuggestedTagResponse"
+                  moduleName = "Suggest #TagTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Seagate%20Expansion%20Drive/Sumit/My%20Work/Git/SuggestTag/Suggest%20%23Tag/Suggest%20%23Tag/decorator/SuggestedTagResponse.swift"
+                  timestampString = "471052055.621602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "146">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/decorator/ResponseTagAlphabet.swift"
+            timestampString = "471022922.542385"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(jsonResponse:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Suggest__Tag.ResponseTagAlphabet.init (Suggest__Tag.ResponseTagAlphabet.Type)(jsonResponse : SwiftyJSON.JSON) -&gt; Suggest__Tag.ResponseTagAlphabet"
+                  moduleName = "Suggest #Tag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Seagate%20Expansion%20Drive/Sumit/My%20Work/Git/SuggestTag/Suggest%20%23Tag/Suggest%20%23Tag/decorator/ResponseTagAlphabet.swift"
+                  timestampString = "471024899.48185"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Suggest__TagTests.ResponseTagAlphabet.init (Suggest__TagTests.ResponseTagAlphabet.Type)(jsonResponse : SwiftyJSON.JSON) -&gt; Suggest__TagTests.ResponseTagAlphabet"
+                  moduleName = "Suggest #TagTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Seagate%20Expansion%20Drive/Sumit/My%20Work/Git/SuggestTag/Suggest%20%23Tag/Suggest%20%23Tag/decorator/ResponseTagAlphabet.swift"
+                  timestampString = "471024900.677771"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/decorator/TagResponseDictionary.swift"
+            timestampString = "471099938.805369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(jsonResponse:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Suggest__Tag.TagResponseDictionary.init (Suggest__Tag.TagResponseDictionary.Type)(jsonResponse : SwiftyJSON.JSON) -&gt; Suggest__Tag.TagResponseDictionary"
+                  moduleName = "Suggest #Tag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Seagate%20Expansion%20Drive/Sumit/My%20Work/Git/SuggestTag/Suggest%20%23Tag/Suggest%20%23Tag/decorator/TagResponseDictionary.swift"
+                  timestampString = "471052053.541158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "367">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Suggest__TagTests.TagResponseDictionary.init (Suggest__TagTests.TagResponseDictionary.Type)(jsonResponse : SwiftyJSON.JSON) -&gt; Suggest__TagTests.TagResponseDictionary"
+                  moduleName = "Suggest #TagTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Seagate%20Expansion%20Drive/Sumit/My%20Work/Git/SuggestTag/Suggest%20%23Tag/Suggest%20%23Tag/decorator/TagResponseDictionary.swift"
+                  timestampString = "471052055.622277"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "367">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/controllers/SuggestedHashTagViewController.swift"
+            timestampString = "471065452.539941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/controllers/SuggestedHashTagViewController.swift"
+            timestampString = "471183248.751818"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/controllers/TagSearchTableViewController.swift"
+            timestampString = "471186177.36743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/controllers/TagSearchTableViewController.swift"
+            timestampString = "471186177.36743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "TagSearchTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/controllers/TagSearchTableViewController.swift"
+            timestampString = "471186177.36743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "TagSearchTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Suggest #Tag/controllers/TagSearchTableViewController.swift"
+            timestampString = "471186177.36743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "TagSearchTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

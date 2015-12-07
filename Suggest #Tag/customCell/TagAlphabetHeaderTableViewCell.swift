@@ -1,19 +1,17 @@
 //
-//  AlbumMenuTableViewCell.swift
+//  TagAlphabetTableViewCell.swift
 //  Suggest #Tag
 //
-//  Created by Sumit Poddar on 11/10/2015.
+//  Created by Sumit Poddar on 6/12/2015.
 //  Copyright © 2015 Sumit Poddar. All rights reserved.
 //
 
 import UIKit
 
-class AlbumMenuTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var albumName: UILabel!
-    @IBOutlet weak var albumDescription: UILabel!
-    @IBOutlet weak var albumRecentPicture: UIImageView!
+class TagAlphabetHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var tabAlphabetHeader: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

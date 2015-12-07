@@ -1,19 +1,19 @@
 //
-//  AlbumMenuTableViewCell.swift
+//  TagDetailsTableViewCell.swift
 //  Suggest #Tag
 //
-//  Created by Sumit Poddar on 11/10/2015.
+//  Created by Sumit Poddar on 6/12/2015.
 //  Copyright © 2015 Sumit Poddar. All rights reserved.
 //
 
 import UIKit
 
-class AlbumMenuTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var albumName: UILabel!
-    @IBOutlet weak var albumDescription: UILabel!
-    @IBOutlet weak var albumRecentPicture: UIImageView!
+class TagDetailsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var tagName: UILabel!
+    @IBOutlet weak var tagMediaCount: UILabel!
+    @IBOutlet weak var tagCellSwitch: UISwitch!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +24,8 @@ class AlbumMenuTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func tagCellSwitch(sender: UISwitch) {
+        print("Switch on ");
+    }
 }
