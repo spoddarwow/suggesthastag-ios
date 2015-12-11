@@ -13,6 +13,7 @@ class TagSearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var tagName: UILabel!
     @IBOutlet weak var tagMediaCount: UILabel!
+    @IBOutlet weak var tagSearchSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,5 +26,8 @@ class TagSearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func tagSearchRowSwitch(sender: UISwitch) {
+        print("Switch value changed \(sender)");
+    }
     
 }

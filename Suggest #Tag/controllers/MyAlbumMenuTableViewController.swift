@@ -42,7 +42,8 @@ class MyAlbumMenuTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("albumNamePopup", forIndexPath: indexPath) as! AlbumMenuTableViewCell
+        print("0 (albums)");
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("albumNamePopup", forIndexPath: indexPath) as! AlbumMenuTableViewCell
         switch (indexPath.section) {
             case 0:
                 let albumObject = albums[indexPath.row]
@@ -53,6 +54,7 @@ class MyAlbumMenuTableViewController: UITableViewController {
                 cell.albumDescription.text = "\(collections.count) moments"
                 let asset = collections.firstObject as! PHAsset;
                 cell.albumRecentPicture.image = getAssetThumbnail(asset)
+                break
             default:
                 let albumObject = albums[indexPath.row]
                 cell.albumName.text = albumObject.localizedTitle;
@@ -62,12 +64,14 @@ class MyAlbumMenuTableViewController: UITableViewController {
                 cell.albumDescription.text = "\(collections.count) moments"
                 let asset = collections.firstObject as! PHAsset;
                 cell.albumRecentPicture.image = getAssetThumbnail(asset)
+                break
         }
         return cell
     }
     
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        print("1");
         let albumHeaderCell = tableView.dequeueReusableCellWithIdentifier("albumNamePopupHeader") as! MyAlbumPopUpHeaderTableViewCell
         albumHeaderCell.backgroundColor = UIColor.lightGrayColor()
         switch (section) {

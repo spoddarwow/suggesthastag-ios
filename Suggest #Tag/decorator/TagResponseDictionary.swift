@@ -12,6 +12,7 @@ import SwiftyJSON
 struct  TagResponseDictionary {
     var tagResponseMap : [String : TagResponses]
     var tagsList: [TagResponse] = [];
+    var tagCopiedTag = Set<String>();
     
     init (jsonResponse: JSON) {
         let tagDictionaries = jsonResponse.array;
@@ -24,6 +25,7 @@ struct  TagResponseDictionary {
                     self.tagResponseMap[key] = tagResponseObject;
                     for tagResp in tagResponseObject.tagResponses {
                         self.tagsList.append(tagResp);
+                        self.tagCopiedTag.insert(tagResp.tagName);
                     }
                 }
                 

@@ -13,6 +13,7 @@ class TagDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var tagName: UILabel!
     @IBOutlet weak var tagMediaCount: UILabel!
     @IBOutlet weak var tagCellSwitch: UISwitch!
+    var parentTableViewController: SuggestedHashTagViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +27,15 @@ class TagDetailsTableViewCell: UITableViewCell {
     }
     
     @IBAction func tagCellSwitch(sender: UISwitch) {
-        print("Switch on ");
+        var tagsToCopySet = parentTableViewController.tagResponseToShow.response.responseData.tagCopiedTag;
+        
+        if sender.on {
+            if(!tagsToCopySet.contains((self.tagName?.text)!)){
+                tagsToCopySet.insert((self.tagName?.text)!);
+            }
+        } else {
+            tagsToCopySet.remove((self.tagName?.text)!);
+        }
+        parentTableViewController.tagResponseToShow.response.responseData.tagCopiedTag = tagsToCopySet;
     }
 }

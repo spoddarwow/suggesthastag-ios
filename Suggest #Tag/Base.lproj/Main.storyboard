@@ -291,14 +291,38 @@
                                 <state key="normal" title="Copy Selected #Tag">
                                     <color key="titleShadowColor" red="0.84505561839999999" green="0.84505561839999999" blue="0.84505561839999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="performCopyTagAction:" destination="3An-qP-FIX" eventType="touchUpInside" id="BTq-Rb-bFO"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-zX-Fl3">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fo-qK-3d3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="49"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <items>
+                                    <tabBarItem title="Popular" id="Wbm-kP-gfF">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="1" title="Favourites" id="hfO-N8-5TV">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="2" title="Add" id="5h2-zv-Vu8">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                                    </tabBarItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="3An-qP-FIX" id="qvd-Kd-ZGh"/>
+                                    <outletCollection property="gestureRecognizers" destination="QsD-Cm-RhS" appends="YES" id="XjD-03-vJ9"/>
+                                </connections>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-zX-Fl3">
                                 <rect key="frame" x="20" y="113" width="560" height="427"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="tagAlphabetHeader" rowHeight="77" id="V1E-Bx-VqF" customClass="TagAlphabetHeaderTableViewCell" customModule="Suggest__Tag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="77"/>
+                                        <rect key="frame" x="0.0" y="40" width="560" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V1E-Bx-VqF" id="8Po-Jk-uJI">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="76.5"/>
@@ -325,26 +349,19 @@
                                             <outlet property="tabAlphabetHeader" destination="nBs-YP-irg" id="ATv-6g-mC5"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tagDetails" rowHeight="64" id="cz1-LU-Akq" customClass="TagDetailsTableViewCell" customModule="Suggest__Tag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="105" width="560" height="64"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tagDetails" rowHeight="66" id="cz1-LU-Akq" customClass="TagDetailsTableViewCell" customModule="Suggest__Tag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="117" width="560" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cz1-LU-Akq" id="GGr-ey-SFU">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDI-TV-bsU">
                                                     <rect key="frame" x="19" y="8" width="407" height="21"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="OCF-Ey-AuB"/>
+                                                        <constraint firstAttribute="height" constant="21" id="ki7-x7-gWa"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-qp-Eqc">
-                                                    <rect key="frame" x="49" y="37" width="377" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -356,18 +373,25 @@
                                                         <action selector="tagCellSwitch:" destination="cz1-LU-Akq" eventType="valueChanged" id="aDF-i8-pAt"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-qp-Eqc">
+                                                    <rect key="frame" x="26" y="37" width="377" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="bXf-zm-NjU" firstAttribute="centerY" secondItem="GGr-ey-SFU" secondAttribute="centerY" id="0n8-DD-V1b"/>
-                                                <constraint firstItem="f4L-qp-Eqc" firstAttribute="top" secondItem="BDI-TV-bsU" secondAttribute="bottom" constant="8" symbolic="YES" id="3I4-Aj-LXI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="bXf-zm-NjU" secondAttribute="trailing" constant="9" id="9p2-e2-7Jf"/>
-                                                <constraint firstItem="BDI-TV-bsU" firstAttribute="top" secondItem="GGr-ey-SFU" secondAttribute="topMargin" id="Sha-fg-RIy"/>
-                                                <constraint firstItem="BDI-TV-bsU" firstAttribute="trailing" secondItem="f4L-qp-Eqc" secondAttribute="trailing" id="Xum-3E-gSE"/>
-                                                <constraint firstItem="f4L-qp-Eqc" firstAttribute="leading" secondItem="GGr-ey-SFU" secondAttribute="leadingMargin" constant="41" id="aLq-PE-c3b"/>
-                                                <constraint firstItem="bXf-zm-NjU" firstAttribute="leading" secondItem="BDI-TV-bsU" secondAttribute="trailing" constant="68" id="f2t-O0-hLe"/>
-                                                <constraint firstItem="BDI-TV-bsU" firstAttribute="leading" secondItem="GGr-ey-SFU" secondAttribute="leadingMargin" constant="11" id="mzV-Gc-LA7"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="f4L-qp-Eqc" secondAttribute="bottom" constant="-2.5" id="p23-Up-Thm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bXf-zm-NjU" secondAttribute="trailing" constant="9" id="2SL-Zb-NQZ"/>
+                                                <constraint firstItem="BDI-TV-bsU" firstAttribute="leading" secondItem="GGr-ey-SFU" secondAttribute="leadingMargin" constant="11" id="3ch-T1-GdS"/>
+                                                <constraint firstItem="f4L-qp-Eqc" firstAttribute="trailing" secondItem="BDI-TV-bsU" secondAttribute="trailing" constant="-23" id="7OW-62-Z5P"/>
+                                                <constraint firstItem="BDI-TV-bsU" firstAttribute="top" secondItem="GGr-ey-SFU" secondAttribute="topMargin" id="Fp6-QZ-L5w"/>
+                                                <constraint firstItem="f4L-qp-Eqc" firstAttribute="leading" secondItem="GGr-ey-SFU" secondAttribute="leadingMargin" constant="18" id="Um2-Pf-AyK"/>
+                                                <constraint firstItem="f4L-qp-Eqc" firstAttribute="top" secondItem="BDI-TV-bsU" secondAttribute="bottom" constant="8" symbolic="YES" id="XRU-Yu-bZg"/>
+                                                <constraint firstItem="bXf-zm-NjU" firstAttribute="top" secondItem="GGr-ey-SFU" secondAttribute="topMargin" constant="8" id="f6f-8f-KEa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="f4L-qp-Eqc" secondAttribute="bottom" constant="-0.5" id="f7p-2f-3TG"/>
+                                                <constraint firstItem="bXf-zm-NjU" firstAttribute="leading" secondItem="BDI-TV-bsU" secondAttribute="trailing" constant="68" id="n8l-pi-ZIA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -383,27 +407,6 @@
                                     <outlet property="delegate" destination="3An-qP-FIX" id="KWs-xC-vYD"/>
                                 </connections>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fo-qK-3d3">
-                                <rect key="frame" x="0.0" y="64" width="600" height="49"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <items>
-                                    <tabBarItem title="Popular" id="Wbm-kP-gfF">
-                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                                    </tabBarItem>
-                                    <tabBarItem tag="1" title="Favourites" id="hfO-N8-5TV">
-                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                                    </tabBarItem>
-                                    <tabBarItem tag="2" title="Add" id="5h2-zv-Vu8">
-                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                                    </tabBarItem>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="3An-qP-FIX" id="qvd-Kd-ZGh"/>
-                                    <outletCollection property="gestureRecognizers" destination="QsD-Cm-RhS" appends="YES" id="XjD-03-vJ9"/>
-                                </connections>
-                            </tabBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -421,6 +424,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="#Tags" id="XVm-6v-sQL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pWA-pT-4cb">
+                            <connections>
+                                <action selector="cancelTagResult:" destination="3An-qP-FIX" id="CyF-IY-ISw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="orU-hO-bk6">
                             <connections>
                                 <segue destination="SMk-ws-un4" kind="popoverPresentation" identifier="tagSearchSegue" popoverAnchorBarButtonItem="orU-hO-bk6" id="OzP-pR-YHb">
@@ -460,7 +468,7 @@
         <scene sceneID="B5J-Jo-wV6">
             <objects>
                 <tableViewController id="g9J-ks-2hd" customClass="TagSearchTableViewController" customModule="Suggest__Tag" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="c4b-gZ-ufj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="40" sectionFooterHeight="40" id="c4b-gZ-ufj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
@@ -476,33 +484,57 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tagSearchCell" rowHeight="70" id="uiU-w6-a98" customClass="TagSearchTableViewCell" customModule="Suggest__Tag" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="84" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uiU-w6-a98" id="uWn-lk-hIy">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYx-Kn-yew">
-                                            <rect key="frame" x="8" y="8" width="532" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYx-Kn-yew">
+                                            <rect key="frame" x="8" y="8" width="448" height="21"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="reW-tu-mfD"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJf-H2-h4v">
-                                            <rect key="frame" x="43" y="37" width="497" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJf-H2-h4v">
+                                            <rect key="frame" x="18" y="37" width="438" height="21"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="438" id="ZDF-gV-Ucq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FjJ-wZ-k3w">
+                                            <rect key="frame" x="527" y="19" width="51" height="31"/>
+                                            <animations/>
+                                            <connections>
+                                                <action selector="tagSearchRowSwitch:" destination="uiU-w6-a98" eventType="valueChanged" id="cCs-pE-6a8"/>
+                                            </connections>
+                                        </switch>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="NJf-H2-h4v" firstAttribute="top" secondItem="GYx-Kn-yew" secondAttribute="bottom" constant="8" symbolic="YES" id="3tp-3M-f5U"/>
+                                        <constraint firstItem="GYx-Kn-yew" firstAttribute="top" secondItem="uWn-lk-hIy" secondAttribute="topMargin" id="C3E-Xu-nte"/>
+                                        <constraint firstItem="NJf-H2-h4v" firstAttribute="leading" secondItem="uWn-lk-hIy" secondAttribute="leadingMargin" constant="10" id="DLw-v2-7YF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="NJf-H2-h4v" secondAttribute="bottom" constant="3.5" id="KA0-yo-rG3"/>
+                                        <constraint firstItem="FjJ-wZ-k3w" firstAttribute="leading" secondItem="NJf-H2-h4v" secondAttribute="trailing" constant="71" id="QIP-QA-6KD"/>
+                                        <constraint firstItem="FjJ-wZ-k3w" firstAttribute="centerY" secondItem="uWn-lk-hIy" secondAttribute="centerY" id="SGM-yb-EMW"/>
+                                        <constraint firstItem="GYx-Kn-yew" firstAttribute="trailing" secondItem="NJf-H2-h4v" secondAttribute="trailing" id="epX-pQ-uIb"/>
+                                        <constraint firstItem="GYx-Kn-yew" firstAttribute="leading" secondItem="uWn-lk-hIy" secondAttribute="leadingMargin" id="qAl-yf-cZg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" identifier="tagDetailsSearch"/>
                                 <connections>
                                     <outlet property="tagName" destination="GYx-Kn-yew" id="wBt-xh-6Z5"/>
+                                    <outlet property="tagSearchSwitch" destination="FjJ-wZ-k3w" id="jyp-yV-MMH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

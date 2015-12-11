@@ -14,7 +14,7 @@ class SuggestedHashTagViewController: UIViewController,UITabBarDelegate, UITable
     @IBOutlet weak var tabBar: UITabBar!
     
     var currentSeletedTabTag = 0;
-    var tagResponseToShow: DecorateHashTagResponse!
+    public var tagResponseToShow: DecorateHashTagResponse!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,22 @@ class SuggestedHashTagViewController: UIViewController,UITabBarDelegate, UITable
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func cancelTagResult(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func performCopyTagAction(sender: UIButton) {
+        UIPasteboard.generalPasteboard().string = convertTagSetToString();
+        let alertController = UIAlertController(title: "Tags Copies", message:
+            "", preferredStyle: UIAlertControllerStyle.Alert)
+        let delay = 1.0 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            alertController.dismissViewControllerAnimated(true, completion: nil)
+        })
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
@@ -68,6 +84,7 @@ class SuggestedHashTagViewController: UIViewController,UITabBarDelegate, UITable
             let tagDetails = tagsToDisplay?.tagResponses[indexPath.row];
             tagDetailsCell.tagName.text = tagDetails!.tagName;
             tagDetailsCell.tagMediaCount.text = "Media Count: \(tagDetails!.mediaCount)";
+            tagDetailsCell.parentTableViewController = self;
             break;
         default:
             break;
@@ -131,6 +148,17 @@ class SuggestedHashTagViewController: UIViewController,UITabBarDelegate, UITable
             }
 
         }
+    }
+    
+    func convertTagSetToString() -> String {
+        var finalCopiedString = "";
+        var tagsToCopySet = self.tagResponseToShow.response.responseData.tagCopiedTag;
+        if(tagsToCopySet.count > 0){
+            for copyTag in tagsToCopySet {
+                finalCopiedString += copyTag + " ";
+            }
+        }
+        return finalCopiedString
     }
 
 }
